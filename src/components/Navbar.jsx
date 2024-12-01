@@ -17,13 +17,13 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <h1>ScaryFlix</h1>
+          <a href="/"><h1>ScaryFlix</h1></a>
         </div>
 
         {/* Watch Now Button */}
         <button className="watch-now">
-          <NavLink to="/watch" className="watch-link">
-            Watch Now
+          <NavLink to="/movies" className="watch-link">
+          <a href="/movies">Watch Now</a>
           </NavLink>
         </button>
 
@@ -55,11 +55,17 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <NavLink to="/about-us" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               About Us
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/contact-us" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
+        
       </div>
     </nav>
   );

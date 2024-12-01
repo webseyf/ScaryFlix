@@ -6,7 +6,10 @@ import Home from "./pages/Home";
 import "./App.css";
 import Footer from "./components/Footer";
 import MoviesPage from "./pages/MoviesPage";
+import GenresPage from "./pages/GenresPage";
 import MovieDetailsPage from "./pages/MoviesDetailsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/COntactUsPage";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/genres" element={<GenresPage />} />
         {/* <Route path="/movies" element={<Movies />} /> */}
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/watch/:movieId" element={<MovieDetailsPage />} />

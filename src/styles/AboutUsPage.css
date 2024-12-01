@@ -1,0 +1,137 @@
+/* About Us Page Styling */
+.about-us-page {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #1b2130;
+  color: #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-us-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us-page h2 {
+  font-size: 28px;
+  color: #ff5722;
+  margin-bottom: 15px;
+}
+
+.about-us-page p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.who-done-it, .technologies-used, .how-to-use, .hire-me {
+  margin-bottom: 40px;
+}
+
+.hire-me p {
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hire-me strong {
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-page {
+    padding: 20px;
+  }
+
+  .about-us-page h1 {
+    font-size: 28px;
+  }
+
+  .about-us-page h2 {
+    font-size: 24px;
+  }
+
+  .about-us-page p, .hire-me p {
+    font-size: 16px;
+  }
+
+  ul li, ol li {
+    font-size: 16px;
+  }
+}
+.about-us-page {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #1b2130;
+  color: #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-us-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us-section {
+  margin-bottom: 40px;
+}
+
+.about-us-section h2 {
+  font-size: 28px;
+  color: #ff5722;
+  margin-bottom: 15px;
+}
+
+.about-us-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-us-section li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-us-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-us-section a:hover {
+  text-decoration: underline;
+}

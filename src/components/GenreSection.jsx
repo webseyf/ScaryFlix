@@ -3,7 +3,10 @@ import "../styles/GenreSection.css";
 
 const GenreSection = ({ genreId, genreName, apiKey }) => {
   const [movies, setMovies] = useState([]);
-
+  const handleWatchNow = (movieId) => {
+    // Navigate to a movie streaming page or open an iframe with the full movie
+    window.location.href = `/watch/${movieId}`; // Modify with actual streaming URL
+  };
   useEffect(() => {
     const fetchMovies = async () => {
       try {
@@ -38,6 +41,12 @@ const GenreSection = ({ genreId, genreName, apiKey }) => {
             <div className="movie-details">
               <h3>{movie.title}</h3>
               <p>{new Date(movie.release_date).getFullYear()}</p>
+              <button
+                    className="watch-now"
+                    onClick={() => handleWatchNow(movie.id)}
+                  >
+                    Watch Now
+                  </button>
             </div>
           </div>
         ))}

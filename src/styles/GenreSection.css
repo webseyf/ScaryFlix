@@ -80,3 +80,29 @@
     gap: 0.5rem;
   }
 }
+
+
+
+
+/* Watch Now Button */
+.watch-now {
+  padding: 0.5rem 1.1rem;
+  background-color: #ff4040;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 64, 64, 0.5);
+}
+
+.watch-now:hover {
+  background-color: #800000;
+  box-shadow: 0 4px 10px rgba(128, 0, 0, 0.7);
+}
+
+
+
+

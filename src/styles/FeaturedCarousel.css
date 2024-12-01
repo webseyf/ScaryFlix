@@ -1,4 +1,4 @@
-/* Container for the featured carousel */
+/* Featured Carousel Container */
 .featured-carousel {
   margin: 2rem auto;
   padding: 1.5rem;
@@ -13,29 +13,45 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-title {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 2rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+/* Section Title */
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.5);
 }
 
-.loading-text {
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 500;
+/* Grid Layout for Movies */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+  gap: 20px;
+  padding: 1rem 0;
 }
 
-/* Movie card styles */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+/* Movie Card Styles */
 .movie-card {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-card:hover {
@@ -45,187 +61,38 @@
 
 .movie-poster {
   width: 100%;
-  height: 400px; /* Set a fixed height for larger screens */
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
 .movie-card:hover .movie-poster {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .movie-info {
-  text-align: center;
-  padding: 0.75rem;
-  background: linear-gradient(180deg, #0d0d0d, #3e1e68);
-  color: #ffffff;
-  border-radius: 0 0 12px 12px;
-  transition: background 0.3s ease;
-}
-
-.movie-info:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.movie-title {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.movie-release-date {
-  font-size: 0.95rem;
-  color: #bbbbbb;
-}
-
-/* Hover effect for movie details */
-.movie-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
   padding: 1rem;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  background: #333;
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
 }
 
-.movie-card:hover .movie-hover {
-  opacity: 1;
+.movie-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
-.movie-overview {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-top: 0.5rem;
-  color: #ddd;
-}
-
-.movie-genres {
+.movie-info p {
   font-size: 0.9rem;
-  margin-top: 0.5rem;
   color: #bbb;
 }
 
-.movie-genres span {
-  background: #333;
-  padding: 0.2rem 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-}
-
-/* Carousel Controls */
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: #333;
-  border-radius: 50%;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: #444;
-  color: #fff;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 1.5rem;
-}
-
-/* Pagination Styles */
-.swiper-pagination-bullet {
-  background: #999;
-}
-
-.swiper-pagination-bullet-active {
-  background: #ffb100;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .movie-card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-
-  .movie-poster {
-    width: 100%;
-    height: 400px; /* Set a fixed height for larger screens */
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-  }
-  .movie-poster {
-    height: 300px; /* Adjust poster height for smaller screens */
-  }
-
-  .carousel-title {
-    font-size: 1.5rem; /* Reduce title size on mobile */
-  }
-
-  .movie-title {
-    font-size: 1rem; /* Smaller movie title on mobile */
-  }
-
-  .movie-release-date {
-    font-size: 0.85rem; /* Smaller release date on mobile */
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 30px;
-    height: 30px; /* Smaller navigation buttons on mobile */
-  }
-
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: 1.2rem; /* Smaller arrow icons */
-  }
-
-  /* Adjust swiper breakpoints for smaller screens */
-  .swiper-container {
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .movie-poster {
-    height: 250px; /* Further adjust poster height for small mobile screens */
-  }
-
-  .carousel-title {
-    font-size: 1.2rem; /* Title size for very small screens */
-  }
-
-  .movie-title {
-    font-size: 0.9rem; /* Title size for smaller screens */
-  }
-
-  .movie-release-date {
-    font-size: 0.8rem; /* Smaller font for release date on small screens */
-  }
-}
-h2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  padding: 2rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.5);
+/* Loading Text */
+.loading-text {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
