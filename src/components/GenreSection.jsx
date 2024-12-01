@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/GenreSection.css";
 
 const GenreSection = ({ genreId, genreName, apiKey }) => {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
   const handleWatchNow = (movieId) => {
-    // Navigate to a movie streaming page or open an iframe with the full movie
-    window.location.href = `/watch/${movieId}`; // Modify with actual streaming URL
+    navigate(`/watch/${movieId}`);
   };
+
   useEffect(() => {
     const fetchMovies = async () => {
       try {
