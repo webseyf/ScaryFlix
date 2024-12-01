@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/FeaturedCarousel.css";
-
+import { useNavigate } from "react-router-dom";
 const FeaturedCarousel = () => {
   const [featuredMovies, setFeaturedMovies] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
@@ -43,9 +43,9 @@ const FeaturedCarousel = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const navigate = useNavigate();
   const handleWatchNow = (movieId) => {
-    // Navigate to a movie streaming page or open an iframe with the full movie
-    window.location.href = `/watch/${movieId}`; // Modify with actual streaming URL
+    navigate(`/watch/${movieId}`);
   };
 
   return (
