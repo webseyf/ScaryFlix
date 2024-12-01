@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -53,9 +54,12 @@ const MoviesPage = () => {
     fetchMovies();
   }, [fetchMovies]);
 
+
+
+
+  const navigate = useNavigate();
   const handleWatchNow = (movieId) => {
-    // Navigate to a movie streaming page or open an iframe with the full movie
-    window.location.href = `/watch/${movieId}`; // Modify with actual streaming URL
+    navigate(`/watch/${movieId}`);
   };
 
   return (
