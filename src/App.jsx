@@ -9,7 +9,7 @@ import MoviesPage from "./pages/MoviesPage";
 import GenresPage from "./pages/GenresPage";
 import MovieDetailsPage from "./pages/MoviesDetailsPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import ContactUsPage from "./pages/COntactUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 function App() {
   return (
