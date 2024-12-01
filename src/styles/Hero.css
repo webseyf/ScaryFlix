@@ -1,0 +1,211 @@
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+    url("/589553 (1).png"); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Overlay for Gradient */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  padding: 5rem 2rem;
+  max-width: 800px;
+}
+
+/* Title and Subtitle */
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font sizes */
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 3px 6px 15px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  animation: slideInDown 1s ease;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font sizes */
+  margin: 1rem 0.5rem;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+  line-height: 2;
+  animation: fadeIn 2s ease;
+}
+/* Call-to-Action Buttons */
+.ctab-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 93; /* Ensure buttons are above other elements */
+}
+
+.ctab-button {
+  padding: 1rem 2.5rem; /* Increased padding for better visibility */
+  font-size: 1.1rem; /* Slightly bigger font size */
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow for prominence */
+  min-width: 160px; /* Ensure buttons are not too small */
+  text-transform: uppercase; /* Make button text more prominent */
+}
+
+/* Primary Button */
+.ctab-button.primary {
+  background-color: #ff4040;
+  color: #ffffff;
+  border: 2px solid transparent;
+}
+
+.ctab-button.primary:hover {
+  background-color: transparent;
+  border: 2px solid #ff4040;
+  color: #ff4040;
+  text-transform: uppercase;
+}
+
+/* Secondary Button */
+.ctab-button.secondary {
+  background-color: #ffffff;
+  color: #ff4040;
+  border: 2px solid #ffffff;
+}
+
+.ctab-button.secondary:hover {
+  background-color: #ff4040;
+  border: 2px solid transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 9.5rem 2rem;
+  }
+  .hero {
+    height: 75vh;}
+  .ctab-buttons {
+    flex-direction: column;
+    padding: 9.5rem 2rem;
+  }
+
+  .ctab-button {
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+  }
+}
+/* New Call-to-Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3.5rem;
+  z-index: 3;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Base Button Styling */
+.action-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px; /* More rounded for a softer look */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  min-width: 180px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  letter-spacing: 1px;
+}
+
+/* Primary Button */
+.action-button.primary {
+  background: linear-gradient(135deg, #ff6347 0%, #ff4040 100%); /* Gradient */
+}
+
+.action-button.primary:hover {
+  background: transparent;
+  border: 2px solid #ff6347;
+  color: #ff6347;
+  box-shadow: 0 6px 15px rgba(255, 99, 71, 0.6); /* Lighter shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Secondary Button */
+.action-button.secondary {
+ color: orangered;
+  border: 2px solid #f8f8f8;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for secondary */
+}
+
+.action-button.secondary:hover {
+  background-color: #ff6347;
+  border: 2px solid transparent;
+  color: white;
+  box-shadow: 0 6px 15px rgba(255, 99, 71, 0.6);
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .action-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+/* src/App.css */
+:root {
+  --primary-bg: #0d0d0d;
+  --secondary-bg: #3e1e68;
+  --accent-color: #e51a5a;
+  --text-light: #e5e5e5;
+  --text-muted: #aaa;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  color: var(--text-light);
+}
+
+h1, .home-page__title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+  color: var(--text-light);
+}
+
+
