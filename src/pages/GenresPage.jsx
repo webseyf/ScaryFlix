@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 //import { Link } from "react-router-dom";
 import "../styles/GenresPage.css";
-
+import { useNavigate } from "react-router-dom";
 const GenresPage = () => {
   const [movies, setMovies] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("");
@@ -12,10 +12,13 @@ const GenresPage = () => {
   const [error, setError] = useState(null);
   const [genres, setGenres] = useState([]);
 
+  const navigate = useNavigate();
   const handleWatchNow = (movieId) => {
-    // Navigate to a movie streaming page or open an iframe with the full movie
-    window.location.href = `/watch/${movieId}`; // Modify with actual streaming URL
+    navigate(`/watch/${movieId}`);
   };
+
+
+
   // Fetch genres on initial render
   useEffect(() => {
     const fetchGenres = async () => {
